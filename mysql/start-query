@@ -1,0 +1,36 @@
+insert into exchanges (esexchangename, esexchangewebsite, esexchangelocation, createdat) valu, nulles
+('hitbtc2', '', '',CURRENT_TIMESTAMP),
+('gdax', '', '',CURRENT_TIMESTAMP),
+('binance', '', '',CURRENT_TIMESTAMP),
+('bitmex', '', '',CURRENT_TIMESTAMP),
+('quoinex', '', '',CURRENT_TIMESTAMP),
+('bithumb', '', '',CURRENT_TIMESTAMP),
+('kraken', '', '',CURRENT_TIMESTAMP),
+('poloniex', '', '',CURRENT_TIMESTAMP),
+('bittrex', '', '',CURRENT_TIMESTAMP);
+
+
+
+insert into useraccounts (esuserid, esexchangeid, createdat) values
+(1, 1, CURRENT_TIMESTAMP),
+(1, 2, CURRENT_TIMESTAMP),
+(1, 3, CURRENT_TIMESTAMP),
+(1, 4, CURRENT_TIMESTAMP),
+(1, 5, CURRENT_TIMESTAMP),
+(1, 6, CURRENT_TIMESTAMP),
+(1, 7, CURRENT_TIMESTAMP),
+(1, 8, CURRENT_TIMESTAMP),
+(1, 9, CURRENT_TIMESTAMP);
+
+
+insert into exchangeuserinfo(esexchangeaccountuserid, esexchangeaccesskey, esexchangesecretkey, esexchangepassphrase)
+VALUES
+(1, '87fdfc8d98fb6607c15f8662a53842d5', '9492ad09760246f2fbc7348d18e1514a', null),
+(2, 'c66dca8e0429fe397caf032e54f150da', 'SC3BSNO5Suoh53urm9Og62ZQXuUiNpBZ+sGkoPE30xvWy4BM6dnIufV6mIP6cKlqMNCR8eIkSySvpC0tvDYKKQ==', 'EV3N!NG'),
+(3, 'mMhnBMSyBoMfNEf3kTGknfcvdxOx7Ot5Bacc2PjdQ9evKBTvf2TfkVKWHvaxIPIu', 'kb9iEk0ESpLIRUDxWrzLLB1NLvJx4LrChF5MJ2HfXTChAM2emLrj7qm1hnR44FRB', null),
+(4, 'PhoeoYi4E3zXydybjw4z7Rkg', 'bsT_rR8qoPed4FGfumRQB804O0rwhrwO5Kvds1Yo-4E6BGCK', null),
+(5, '320688', 'yLfyuEz4jkUQZ2Y3QR7bYJT/AAV2BaQwW4cGH/58vjnd8Bz67wI/fYdHP7YtVciBasOLxgiOhkeDm9l59hnO/g==', null),
+(6, '28fea373005626fe6a0a5747cd89aca1', 'b2d76c3717562360f66eb9baad8f6f16', null),
+(7, 'y7My2LExaPDtPIZkoxR85CL0eLpXwj/aNEmc7qLoKMLM+7/9nHwN7neb', 'wYVViC29mTNDjWyDnKPsZhj2BnwU/yY1FrhnLXN83YGTxj7Aq0ubOghsLcboi8OBPVQOqY0CKCipu33VAymHwA==', null),
+(8, '8YOTCMLW-FEKNQVVS-1REE896U-1ZLQV1YU', '88dc164819916a82fa01d0a55483cdb43f3a59f82359394476e9bf8238c02687a3ec9b3a7af1beaa40b26582b894851ea4f8ca9d0a0b64b18e3ee2d245ca6d9d', null),
+(9, '06e6e9c54b084b1fa2f304adf314ba36', '7d91d52456004086a77322b382b61325', null);

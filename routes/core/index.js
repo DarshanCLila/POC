@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 /**
-* import AWS controller
+* import controller
 */
 const coreController = require('../../controllers/core-controller');
 

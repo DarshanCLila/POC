@@ -6,6 +6,7 @@ const index = require('./routes');
 
 const app = express();
 const constants = require('./config/constants');
+const config = require('./config');
 const pollExchange = require('./helpers/poller');
 
 pollExchange.updateExchange('bittrex');
@@ -24,7 +25,7 @@ app.get('/ping', (req, res) => {
 });
 
 // routes starting with /api is handled
-app.use('/api', index);
+app.use('/api/v1', index);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -47,6 +48,6 @@ app.use((err, req, res, next) => {
 });
 
 
-app.listen(9000);
-console.log('server started on port', 9000);
+app.listen(config.application.httpPort);
+console.log('server started on port', config.application.httpPort);
 module.exports = app;
