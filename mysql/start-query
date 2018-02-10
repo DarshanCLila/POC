@@ -23,7 +23,7 @@ insert into useraccounts (esuserid, esexchangeid, createdat) values
 (1, 9, CURRENT_TIMESTAMP);
 
 
-insert into exchangeuserinfo(esexchangeaccountuserid, esexchangeaccesskey, esexchangesecretkey, esexchangepassphrase)
+insert into exchangeuserinfo(esuseraccountid, esexchangeaccesskey, esexchangesecretkey, esexchangepassphrase)
 VALUES
 (1, '87fdfc8d98fb6607c15f8662a53842d5', '9492ad09760246f2fbc7348d18e1514a', null),
 (2, 'c66dca8e0429fe397caf032e54f150da', 'SC3BSNO5Suoh53urm9Og62ZQXuUiNpBZ+sGkoPE30xvWy4BM6dnIufV6mIP6cKlqMNCR8eIkSySvpC0tvDYKKQ==', 'EV3N!NG'),

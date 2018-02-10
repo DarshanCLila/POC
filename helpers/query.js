@@ -5,7 +5,7 @@ class QueryHelper {
       'exchangeuserinfo.esexchangesecretkey as secret, exchangeuserinfo.esexchangepassphrase as password from ' +
       `useraccounts, exchanges, exchangeuserinfo where useraccounts.esuserid = ${userId} and ` +
       `useraccounts.esexchangeid = ${exchangeId} and exchanges.id = useraccounts.esexchangeid ` +
-      'and useraccounts.id = exchangeuserinfo.esexchangeaccountuserid';
+      'and useraccounts.id = exchangeuserinfo.esuseraccountid';
   }
 
   checkForBalanceInfo(userAccountId, ticker) {
@@ -23,11 +23,11 @@ class QueryHelper {
   }
 
   checkForTradeInfo(userId, tradeId) {
-    return `select id from usertradehistory where esexchangeaccountuserid = ${userId} and estradeid = '${tradeId}'`;
+    return `select id from usertradehistory where esuseraccountid = ${userId} and estradeid = '${tradeId}'`;
   }
 
   insertTradeData(userAccountId, trade) {
-    return 'insert into usertradehistory(esexchangeaccountuserid, estradeid, esorderid, estradeprice, estradecurrencyid, estradesize,' +
+    return 'insert into usertradehistory(esuseraccountid, estradeid, esorderid, estradeprice, estradecurrencyid, estradesize,' +
     ' estradefee, estradetype, estradesettled, timestamp) ' +
     `values(${userAccountId}, '${trade.estradeid}', '${trade.esorderid}', ` +
      `${trade.estradeprice}, null, ${trade.estradesize}, ${trade.estradefee}, '${trade.estradetype}',` +
